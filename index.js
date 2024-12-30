@@ -7,7 +7,7 @@ import createError from 'http-errors';
 
 dotenv.config();
 
-const VERSION = '0.1.0';
+const VERSION = '1.0.0';
 
 // ===== 常量定义 =====
 // 开放端口
