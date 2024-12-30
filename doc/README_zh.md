@@ -18,7 +18,7 @@
   </a>
   <br><br>
   
-  [中文](./doc/README_zh.md) | [English](./README_en.md)
+  [中文](./doc/README_zh.md) | [English](./README.md)
 </div>
 
 ## 支持的接口
