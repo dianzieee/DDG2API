@@ -16,7 +16,7 @@
   	<img src="https://vercel.com/button" style="height: 30px;"/></a>
 	<br><br>
 
-[中文](./doc/README_zh.md) | [English](./README_en.md)
+[中文](./doc/README_zh.md) | [English](./README.md)
 </div>
 
 ## Supported Interfaces
