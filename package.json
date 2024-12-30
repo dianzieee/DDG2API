@@ -1,20 +1,21 @@
 {
   "name": "ddg2api",
   "version": "1.0.0",
-  "type": "module",
-  "private": true,
+  "description": "DuckDuckGo API 转换为 OpenAI API 格式的 Cloudflare Worker",
+  "main": "src/workers.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
   },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "node-fetch": "^3.3.2",
-    "http-errors": "^2.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0"
+  "keywords": [
+    "cloudflare-workers",
+    "duckduckgo",
+    "api",
+    "openai",
+    "proxy"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.30.0"
   }
 }
