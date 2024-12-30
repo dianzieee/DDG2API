@@ -16,9 +16,8 @@
   	<img src="https://vercel.com/button" style="height: 30px;"/></a>
 	<br><br>
 
-  [中文](./doc/README_zh.md) | [English](./README_en.md)
+[中文](./doc/README_zh.md) | [English](./README_en.md)
 </div>
-
 
 ## Supported Interfaces
 
@@ -35,12 +34,11 @@
 
 ## Environment variables
 
-| Name       | Option   | Description                                      |
-| ---------- | -------- | ------------------------------------------------ |
-| `PORT`     | Optional | Request port, default is 3000                    |
-| `API_KEYS` | Optional | API key group, separate multiple values with `,` |
-
-
+| Name          | Option   | Description                                                                                                                    |
+|---------------|----------|--------------------------------------------------------------------------------------------------------------------------------|
+| `PORT`        | Optional | Request port, default is 3000                                                                                                  |
+| `API_KEYS`    | Optional | API key group, separate multiple values with `,`                                                                               |
+| `PATH_PREFIX` | Optional | The actual endpoint URL should be prefixed with `PATH_PREFIX` after configuration, example: `/PATH_PREFIX/v1/chat/completions` |
 
 ## Deployment
 
@@ -49,7 +47,7 @@
   <a href="https://deploy.workers.cloudflare.com/?url=https://github.com/meethuhu/ddg2api/actions/workflows/workers-deploy.yml">
   	<img src="https://deploy.workers.cloudflare.com/button" style="height: 30px;"/></a>
 
-  *suggest manually  setting `API_KEYS`  
+  *suggest manually setting `API_KEYS`  
   *To deploy manually, go to the `cf` branch
 
 - ### Vercel
@@ -57,7 +55,7 @@
   <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmeethuhu%2FDDG2API">
   	<img src="https://vercel.com/button" style="height: 30px;"/></a>
 
-  *suggest manually  setting `API_KEYS`
+  *suggest manually setting `API_KEYS`
 
 - ### Docker
 
@@ -99,6 +97,7 @@
   ```
 
 ## Usage example
+
 ```shell
 # Get model list
 curl http://localhost:3000/v1/models \
@@ -119,10 +118,10 @@ curl http://localhost:3000/v1/chat/completions \
 
 ### Notes
 
-1.  This project is for learning and research purposes only
-2.  Please comply with DuckDuckGo's terms of use
-3.  Recommended for use in local or private environments
-4.  Please keep your keys secure
+1. This project is for learning and research purposes only
+2. Please comply with DuckDuckGo's terms of use
+3. Recommended for use in local or private environments
+4. Please keep your keys secure
 
 ### Open Source License
 

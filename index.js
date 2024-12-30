@@ -16,6 +16,9 @@ const PORT = process.env.PORT || 3000;
 const API_KEYS = new Set(process.env.API_KEYS ? process.env.API_KEYS.split(',') : []);
 // DEBUG 模式
 const DEBUG_MODE = process.env.DEBUG_MODE === 'true';
+// 自定义前缀
+const PATH_PREFIX = process.env.PATH_PREFIX?'/'+process.env.PATH_PREFIX:'';
+
 // 模型映射
 const MODELS = {
     'gpt-4o-mini': 'gpt-4o-mini',
@@ -273,7 +276,7 @@ app.use(cors({
 app.options('*', cors());
 
 // v1/models 路由
-app.get('/v1/models', validateApiKey, (req, res) => {
+app.get(PATH_PREFIX+'/v1/models', validateApiKey, (req, res) => {
     res.json({
         object: "list",
         data: Object.keys(MODELS).map(modelName => ({
@@ -285,7 +288,7 @@ app.get('/v1/models', validateApiKey, (req, res) => {
 });
 
 // v1/chat/completions 路由
-app.post('/v1/chat/completions', validateApiKey, async (req, res, next) => {
+app.post(PATH_PREFIX+'/v1/chat/completions', validateApiKey, async (req, res, next) => {
     const {messages, model, stream = false} = req.body;
 
     if (!messages?.length) {
